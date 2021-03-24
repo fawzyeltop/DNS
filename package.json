@@ -1,0 +1,27 @@
+{
+    "name": "task",
+    "version": "1.0.0",
+    "description": "DNS Records are taken form the user and sent to the server",
+    "main": "app.js",
+    "scripts": {
+        "test": "jest",
+        "stop": "taskkill -f -im node.exe",
+        "start": "nodemon app.js"
+    },
+    "author": "Abdulrahman Fawzy",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "helmet": "^4.2.0",
+        "morgan": "^1.10.0",
+        "nodemon": "^1.19.2",
+        "response-time": "^2.3.2",
+        "validatorjs": "^3.22.1"
+    },
+    "devDependencies": {
+        "jest": "^26.4.1"
+    }
+}
