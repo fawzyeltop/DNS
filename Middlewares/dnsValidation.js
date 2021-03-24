@@ -4,13 +4,13 @@ const dnsValidation = (req, res, next) => {
     const validationRule = {
         "A": "required|string|IPv4Strict",
         "AAAA": "required|string|IPv6Strict",
-        "CNAME": "required|string|CNAMEStrict",
-        "MX": "required|string",
-        "NS": "required|string",
-        "PTR": "required|string",
-        "SOA": "required|string",
-        "SRV": "required|string|SRVStrict",
-        "TXT": "required|string",
+        "CNAME": "required|string|IPv4Strict",
+        "MX": "required|string|IPv4Strict",
+        "NS": "required|string|IPv4Strict",
+        "PTR": "required|string|IPv4Strict",
+        "SOA": "required|string|IPv4Strict",
+        "SRV": "required|string|IPv4Strict",
+        "TXT": "required|string|IPv4Strict",
     }
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
